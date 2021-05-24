@@ -6,7 +6,9 @@ RUN mkdir -p /app && \
 USER daemon
 WORKDIR /app
 
+RUN
+
 COPY ./target/simpleUserApp-0.0.1-SNAPSHOT.jar /app/simpleUserApp-0.0.1-SNAPSHOT.jar
 
-CMD ["java", "-jar", "/app/simpleUserApp-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/simpleUserApp-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8080
